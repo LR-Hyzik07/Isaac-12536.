@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.hero {
+    background-image: url('hero-image.jpg');
+    background-size: cover;
+    color: white;
+    padding: 100px 20px;
+    margin-top: 40px;
+}
+
+.about, .projects, .skills, .experience, .contact, footer {
+    text-align: center;
+    padding: 20px;
+}
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 2s ease;
+}
+
+.slide {
+    position: relative;
+    flex: 0 0 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.project-info {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    color: white;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 50px 10px;
+    }
+    nav ul li {
+        display: block;
+        text-align: center;
+    }
+
+
+
+
+    .contact {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .contact form {
+        max-width: 400px;
+        width: 100%;
+    }
+    
+    .contact input,
+    .contact textarea {
+        width: 100%; /* Ensures full width on mobile */
+        margin: 10px 0;
+        padding: 8px;
+    }
+    
+    @media (max-width: 768px) {
+        .hero, .about, .projects, .skills, .experience, .contact {
+            padding: 10px;
+        }
+        .carousel {
+            height: 200px; /* Adjust carousel height for mobile */
+        }
+        .slides img {
+            height: 200px;
+        }
+    }
+    
+}
